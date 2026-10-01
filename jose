@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introducción a Git & GitHub Pages</title>
+  <!-- Tailwind CSS CDN para estilos rápidos, limpios y responsivos -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    code, pre {
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen selection:bg-indigo-500 selection:text-white">
+
+  <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <!-- Icono representativo de Git / Código -->
+          <div class="w-9 h-9 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-sm shadow-indigo-200">
+            &lt;/&gt;
+          </div>
+          <span class="font-semibold text-lg tracking-tight text-slate-900">Clase Web • Git</span>
+        </div>
+        <div class="flex items-center space-x-6 text-sm font-medium">
+          <a href="#conceptos" class="text-slate-600 hover:text-indigo-600 transition-colors">Conceptos</a>
+          <a href="#practica" class="text-slate-600 hover:text-indigo-600 transition-colors">Interactividad</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-slate-800 transition-colors shadow-sm">
+            Ir a GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="py-16 sm:py-24 px-4 text-center bg-gradient-to-b from-white to-slate-50 border-b border-slate-100">
+    <div class="max-w-3xl mx-auto space-y-5">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200/60">
+        🚀 Práctica de Git & GitHub Pages
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        Aprende a publicar tu primera página web
+      </h1>
+      <p class="text-lg text-slate-600 leading-relaxed">
+        Este es un archivo <code class="bg-slate-100 text-indigo-600 px-1.5 py-0.5 rounded text-sm font-semibold">index.html</code> listo para clonar, editar y desplegar gratuitamente en internet mediante <strong>GitHub Pages</strong>.
+      </p>
+    </div>
+  </header>
+
+  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+    <section id="conceptos" class="scroll-mt-20">
+      <div class="text-center max-w-xl mx-auto mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">Conceptos Clave</h2>
+        <p class="text-slate-500 mt-2 text-sm sm:text-base">Los cuatro comandos y herramientas fundamentales que todo desarrollador debe dominar.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Card 1: Commit -->
+        <article class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl mb-4">
+            💾
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Commit</h3>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+            Una captura o "foto" instantánea del estado de tu proyecto en un momento dado. Permite registrar cambios con un mensaje explicativo.
+          </p>
+          <div class="mt-4 bg-slate-100 p-2.5 rounded-lg text-xs text-slate-700 font-mono">
+            git commit -m "Mi primer cambio"
+          </div>
+        </article>
+
+        <!-- Card 2: Push -->
+        <article class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold text-xl mb-4">
+            ⬆️
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Push</h3>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+            Envía los commits que tienes en tu computadora local al repositorio remoto en GitHub para guardarlos en la nube o compartirlos.
+          </p>
+          <div class="mt-4 bg-slate-100 p-2.5 rounded-lg text-xs text-slate-700 font-mono">
+            git push origin main
+          </div>
+        </article>
+
+        <!-- Card 3: Branch -->
+        <article class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold text-xl mb-4">
+            🌿
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">Branch (Rama)</h3>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+            Una línea de trabajo independiente. Te permite probar nuevas características o resolver errores sin alterar la versión principal del código.
+          </p>
+          <div class="mt-4 bg-slate-100 p-2.5 rounded-lg text-xs text-slate-700 font-mono">
+            git checkout -b nueva-rama
+          </div>
+        </article>
+
+        <!-- Card 4: GitHub Pages -->
+        <article class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-xl mb-4">
+            🌐
+          </div>
+          <h3 class="text-lg font-bold text-slate-900">GitHub Pages</h3>
+          <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+            Servicio gratuito de GitHub que aloja directamente páginas estáticas (HTML, CSS y JS) usando el contenido de tu repositorio.
+          </p>
+          <div class="mt-4 bg-slate-100 p-2.5 rounded-lg text-xs text-slate-700 font-mono">
+            usuario.github.io/repositorio
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="practica" class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm scroll-mt-20">
+      <div class="max-w-md mx-auto text-center space-y-6">
+        <div>
+          <span class="text-xs font-semibold uppercase tracking-wider text-indigo-600">Prueba Interactiva</span>
+          <h2 class="text-2xl font-bold text-slate-900 mt-1">Contador en JavaScript</h2>
+          <p class="text-slate-500 text-sm mt-1">Prueba los botones para comprobar que el código JavaScript funciona en tu navegador.</p>
+        </div>
+
+        <!-- Indicador de Valor -->
+        <div class="py-4">
+          <span id="counterValue" class="text-6xl font-black text-indigo-600 tabular-nums transition-all">0</span>
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="flex items-center justify-center gap-3">
+          <button id="btnDecrement" class="px-5 py-2.5 rounded-xl border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 active:scale-95 transition">
+            - Restar
+          </button>
+          <button id="btnReset" class="px-4 py-2.5 rounded-xl bg-slate-100 text-slate-600 text-sm font-medium hover:bg-slate-200 active:scale-95 transition">
+            Reiniciar
+          </button>
+          <button id="btnIncrement" class="px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-700 shadow-md shadow-indigo-200 active:scale-95 transition">
+            + Sumar
+          </button>
+        </div>
+
+        <!-- Notificación de estado opcional -->
+        <div id="statusMessage" class="text-xs text-slate-400 h-4">Haz clic para interactuar</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t border-slate-200 py-8 px-4 mt-auto">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+      <p>Diseñado para propósitos educativos • Ejemplo de clase para GitHub</p>
+      <p>Sube este archivo como <code class="font-mono bg-slate-100 px-1 py-0.5 rounded text-slate-700">index.html</code> a tu rama principal.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Variables de estado del contador
+    let count = 0;
+
+    // Referencias a los elementos del DOM
+    const counterDisplay = document.getElementById('counterValue');
+    const btnIncrement = document.getElementById('btnIncrement');
+    const btnDecrement = document.getElementById('btnDecrement');
+    const btnReset = document.getElementById('btnReset');
+    const statusMessage = document.getElementById('statusMessage');
+
+    // Función para actualizar la interfaz
+    function updateDisplay(actionText) {
+      counterDisplay.textContent = count;
+      
+      // Cambio de color visual según el signo
+      if (count > 0) {
+        counterDisplay.className = 'text-6xl font-black text-indigo-600 tabular-nums transition-all';
+      } else if (count < 0) {
+        counterDisplay.className = 'text-6xl font-black text-rose-500 tabular-nums transition-all';
+      } else {
+        counterDisplay.className = 'text-6xl font-black text-slate-700 tabular-nums transition-all';
+      }
+
+      if (actionText) {
+        statusMessage.textContent = actionText;
+      }
+    }
+
+    // Manejadores de eventos
+    btnIncrement.addEventListener('click', () => {
+      count++;
+      updateDisplay('Incrementado en 1');
+    });
+
+    btnDecrement.addEventListener('click', () => {
+      count--;
+      updateDisplay('Reducido en 1');
+    });
+
+    btnReset.addEventListener('click', () => {
+      count = 0;
+      updateDisplay('Contador reiniciado a 0');
+    });
+  </script>
+</body>
+</html>
